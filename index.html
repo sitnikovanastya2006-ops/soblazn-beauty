@@ -26,6 +26,7 @@
             --white: #ffffff;
         }
 
+        /* Мобильное меню */
         header {
             background: var(--gray);
             color: var(--white);
@@ -46,9 +47,24 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: var(--pink);
+        }
+
+        /* Гамбургер меню для телефона */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--pink);
+            margin: 3px 0;
+            transition: 0.3s;
         }
 
         nav ul {
@@ -64,12 +80,14 @@
             color: var(--white);
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         nav ul li a:hover {
             color: var(--pink);
         }
 
+        /* Главный баннер */
         .hero {
             background: linear-gradient(135deg, var(--gray) 0%, #444 100%);
             color: var(--white);
@@ -79,31 +97,35 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 4rem; /* Увеличила заголовок! */
             margin-bottom: 1rem;
             color: var(--pink);
+            font-weight: bold;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.8rem; /* Увеличила слоган! */
             max-width: 600px;
             margin: 0 auto 2rem;
+            font-weight: 300;
         }
 
         .cta-button {
             display: inline-block;
             background: var(--dark-pink);
             color: var(--white);
-            padding: 12px 30px;
+            padding: 15px 35px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: bold;
             transition: background 0.3s;
             margin: 5px;
+            font-size: 1.1rem;
         }
 
         .cta-button:hover {
             background: #d44673;
+            transform: translateY(-2px);
         }
 
         .secondary-button {
@@ -111,6 +133,7 @@
             border: 2px solid var(--dark-pink);
         }
 
+        /* Секции */
         section {
             padding: 80px 2rem;
             max-width: 1200px;
@@ -128,6 +151,7 @@
             color: var(--dark-pink);
         }
 
+        /* Преимущества */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -138,52 +162,63 @@
         .feature {
             background: var(--white);
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
         }
 
         .feature h3 {
             color: var(--dark-pink);
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
         .years-badge {
             background: var(--dark-pink);
             color: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
+            padding: 1rem 2rem;
+            border-radius: 30px;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             display: inline-block;
             margin-bottom: 1rem;
         }
 
+        /* Услуги */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-        }.service-card {
+        }
+
+        .service-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
 
         .service-content {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .service-content h3 {
             color: var(--dark-pink);
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
+        /* Салоны */
         .salons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -192,42 +227,51 @@
 
         .salon-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .salon-card:hover {
+            transform: translateY(-5px);
         }
 
         .salon-card h3 {
             color: var(--dark-pink);
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
         .working-hours {
             background: var(--pink);
             color: var(--gray);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
             font-weight: bold;
             margin: 1rem 0;
             display: inline-block;
+            font-size: 0.9rem;
         }
 
+        /* Вакансии */
         .vacancy {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 3rem;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-top: 2rem;
         }
 
         .vacancy h3 {
             color: var(--dark-pink);
             margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
 
+        /* Контакты */
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -238,9 +282,9 @@
         .contact-card {
             background: var(--white);
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .contact-card h3 {
@@ -253,6 +297,8 @@
             font-weight: bold;
             color: var(--gray);
             text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
         }
 
         .social-links {
@@ -264,47 +310,105 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
+        /* Футер */
         footer {
             background: var(--gray);
             color: var(--white);
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             margin-top: 4rem;
         }
 
+        /* Адаптивность для телефона */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                text-align: center;
+            .menu-toggle {
+                display: flex;
             }
 
             nav ul {
-                margin-top: 1rem;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--gray);
                 flex-direction: column;
+                padding: 1rem 0;
+            }
+
+            nav ul.active {
+                display: flex;
             }
 
             nav ul li {
-                margin: 0.5rem 0;
+                margin: 0;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid #444;
+            }
+
+            .hero {
+                padding: 120px 1rem 80px;
+                margin-top: 60px;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.3rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
             }
 
             section {
                 padding: 60px 1rem;
             }
+
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Шапка сайта -->
     <header>
         <div class="nav-container">
             <div class="logo">СОБЛАЗН</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#main">Главная</a></li>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#salons">Салоны</a></li>
@@ -315,14 +419,18 @@
         </div>
     </header>
 
+    <!-- Главный баннер -->
     <section id="main" class="hero">
         <h1>СОБЛАЗН</h1>
         <p>Ваша красота — наш главный соблазн</p>
         <div>
             <a href="http://dikidi.net/1849793" class="cta-button">Записаться онлайн</a>
-            <a href="#contacts" class="cta-button secondary-button">Контакты</a>
+            <a href="#contacts" class="cta-button secondary-button">Наши контакты</a>
         </div>
-    </section><section id="features">
+    </section>
+
+    <!-- Преимущества -->
+    <section id="features">
         <div class="section-title">
             <h2>Почему выбирают нас</h2>
         </div>
@@ -347,6 +455,7 @@
         </div>
     </section>
 
+    <!-- Услуги -->
     <section id="services">
         <div class="section-title">
             <h2>Наши услуги</h2>
@@ -397,6 +506,7 @@
         </div>
     </section>
 
+    <!-- Салоны -->
     <section id="salons">
         <div class="section-title">
             <h2>Наши салоны</h2>
@@ -410,17 +520,21 @@
                 <p><strong>Автозаводская ул., 44А</strong><br>(ТЦ "Астраханский")</p>
                 <div class="working-hours">с 8:00 до 20:00</div>
                 <p>📞 Телефон: <a href="tel:+79082450989" class="phone-number">+7 (908) 245-09-89</a></p>
+                <p><em>Запись по телефону</em></p>
             </div>
             <div class="salon-card">
                 <h3>💫 Салон №2</h3>
                 <p><strong>ул. Маршала Рыбалко, 32</strong><br>(этаж 1)</p>
                 <div class="working-hours">с 8:00 до 20:00</div>
-                <p>📞 Телефон: <a href="tel:+79028317095" class="phone-number">+7 (902) 831-70-95</a></p></div>
+                <p>📞 Телефон: <a href="tel:+79028317095" class="phone-number">+7 (902) 831-70-95</a></p>
+                <p><em>Запись по телефону</em></p>
+            </div>
             <div class="salon-card">
                 <h3>✨ Салон №3</h3>
                 <p><strong>Чистопольская ул., 21</strong></p>
                 <div class="working-hours">с 8:00 до 20:00</div>
                 <p>📞 Телефон: <a href="tel:+79024723498" class="phone-number">+7 (902) 472-34-98</a></p>
+                <p><em>Запись по телефону</em></p>
             </div>
             <div class="salon-card">
                 <h3>⭐ Салон №4</h3>
@@ -428,11 +542,12 @@
                 <div class="working-hours">с 8:00 до 20:00</div>
                 <p>📞 Телефон: <a href="tel:+79922133024" class="phone-number">+7 (992) 213-30-24</a></p>
                 <p style="margin-top: 1rem;"><strong>🎁 Онлайн-запись доступна</strong></p>
-                <a href="http://dikidi.net/1849793" class="cta-button" style="margin-top: 1rem;">Записаться</a>
+                <a href="http://dikidi.net/1849793" class="cta-button" style="margin-top: 1rem;">Записаться онлайн</a>
             </div>
         </div>
     </section>
 
+    <!-- Вакансии -->
     <section id="vacancies">
         <div class="section-title">
             <h2>Присоединяйтесь к нашей команде</h2>
@@ -457,6 +572,7 @@
         </div>
     </section>
 
+    <!-- Контакты -->
     <section id="contacts">
         <div class="section-title">
             <h2>Контакты</h2>
@@ -464,10 +580,10 @@
         <div class="contact-info">
             <div class="contact-card">
                 <h3>📞 Телефоны для записи</h3>
-                <p><a href="tel:+79082450989" class="phone-number">+7 (908) 245-09-89</a></p>
-                <p><a href="tel:+79028317095" class="phone-number">+7 (902) 831-70-95</a></p>
-                <p><a href="tel:+79024723498" class="phone-number">+7 (902) 472-34-98</a></p>
-                <p><a href="tel:+79922133024" class="phone-number">+7 (992) 213-30-24</a></p>
+                <p><strong>Салон 1:</strong> <a href="tel:+79082450989" class="phone-number">+7 (908) 245-09-89</a></p>
+                <p><strong>Салон 2:</strong> <a href="tel:+79028317095" class="phone-number">+7 (902) 831-70-95</a></p>
+                <p><strong>Салон 3:</strong> <a href="tel:+79024723498" class="phone-number">+7 (902) 472-34-98</a></p>
+                <p><strong>Салон 4:</strong> <a href="tel:+79922133024" class="phone-number">+7 (992) 213-30-24</a></p>
             </div>
             <div class="contact-card">
                 <h3>⏰ Режим работы</h3>
@@ -484,13 +600,34 @@
             </div>
         </div>
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="http://dikidi.net/1849793" class="cta-button">Записаться онлайн</a>
+            <a href="http://dikidi.net/1849793" class="cta-button">Записаться онлайн в салон №4</a>
         </div>
     </section>
 
+    <!-- Подвал -->
     <footer>
         <p>© 2024 Сеть салонов красоты "Соблазн". Все права защищены.</p>
         <p>Пермь, Закамск | Ежедневно с 8:00 до 20:00 | Работаем с 2004 года</p>
     </footer>
+
+    <!-- Скрипт для мобильного меню -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            mobileMenu.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Закрываем меню при клике на ссылку
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
