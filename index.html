@@ -852,4 +852,168 @@
             <div class="salon-card animate-on-scroll">
                 <h3>💫 ул. Маршала Рыбалко, 32</h3>
                 <p><strong>1 этаж</strong></p>
-                <div class="working-hours">с 
+                <div class="working-hours">с 8:00 до 20:00</div>
+                <p>📞 Телефон: <a href="tel:+79028317095" class="phone-number">+7 (902) 831-70-95</a></p>
+                <p><em>Запись по телефону</em></p>
+            </div>
+            <div class="salon-card animate-on-scroll">
+                <h3>✨ Чистопольская ул., 21</h3>
+                <div class="working-hours">с 8:00 до 20:00</div>
+                <p>📞 Телефон: <a href="tel:+79024723498" class="phone-number">+7 (902) 472-34-98</a></p>
+                <p><em>Запись по телефону</em></p>
+            </div>
+            <div class="salon-card animate-on-scroll">
+                <h3>⭐ ул. Калинина, 36</h3>
+                <div class="working-hours">с 8:00 до 20:00</div>
+                <p>📞 Телефон: <a href="tel:+79922133024" class="phone-number">+7 (992) 213-30-24</a></p>
+                <p style="margin-top: 1rem;"><strong>🎁 Онлайн-запись доступна</strong></p>
+                <a href="http://dikidi.net/1849793" class="cta-button" style="margin-top: 1rem;">Записаться онлайн</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Вакансии -->
+    <section id="vacancies">
+        <div class="section-title animate-on-scroll">
+            <h2>Присоединяйтесь к нашей команде</h2>
+        </div>
+        <div class="vacancy animate-on-scroll">
+            <h3>Мы всегда рады талантливым мастерам!</h3>
+            <p>Сеть салонов красоты "Соблазн" ищет в свою команду увлеченных, творческих профессионалов. Если вы любите дарить красоту и уверенность, хотите расти и развиваться в дружном коллективе - мы будем рады видеть вас!</p>
+            
+            <div style="text-align: left; max-width: 600px; margin: 2rem auto;">
+                <h4 style="color: var(--dark-pink); margin-bottom: 1rem;">Мы предлагаем:</h4>
+                <ul style="text-align: left;">
+                    <li>Стабильный поток клиентов</li>
+                    <li>Комфортные условия работы</li>
+                    <li>Достойную оплату труда</li>
+                    <li>Профессиональное развитие</li>
+                    <li>Поддержку дружной команды</li>
+                    <li>Гибкий график работы</li>
+                </ul>
+            </div>
+
+            <p><strong>Отправьте свое резюме на нашу почту или свяжитесь с нами по телефону для собеседования.</strong></p>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts">
+        <div class="section-title animate-on-scroll">
+            <h2>Контакты</h2>
+        </div>
+        <div class="contact-info">
+            <div class="contact-card animate-on-scroll">
+                <h3>📞 Телефоны для записи</h3>
+                <p><strong>Автозаводская ул., 44А:</strong> <a href="tel:+79082450989" class="phone-number">+7 (908) 245-09-89</a></p>
+                <p><strong>ул. Маршала Рыбалко, 32:</strong> <a href="tel:+79028317095" class="phone-number">+7 (902) 831-70-95</a></p>
+                <p><strong>Чистопольская ул., 21:</strong> <a href="tel:+79024723498" class="phone-number">+7 (902) 472-34-98</a></p>
+                <p><strong>ул. Калинина, 36:</strong> <a href="tel:+79922133024" class="phone-number">+7 (992) 213-30-24</a></p>
+            </div>
+            <div class="contact-card animate-on-scroll">
+                <h3>⏰ Режим работы</h3>
+                <p><strong>Ежедневно</strong></p>
+                <p>с 8:00 до 20:00</p>
+                <p>Без перерывов и выходных</p>
+            </div>
+            <div class="contact-card animate-on-scroll">
+                <h3>📍 Мы в соцсетях</h3>
+                <div class="social-links">
+                    <p>Следите за нашими акциями и новостями:</p>
+                    <a href="https://vk.com/soblaznbeautysalon" target="_blank">ВКонтакте</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="http://dikidi.net/1849793" class="cta-button animate-on-scroll">Записаться онлайн в салон на Калинина, 36</a>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2024 Сеть салонов красоты "Соблазн". Все права защищены.</p>
+        <p>Пермь, Закамск | Ежедневно с 8:00 до 20:00 | Работаем более 20 лет</p>
+    </footer>
+
+    <!-- Скрипты -->
+    <script>
+        // Мобильное меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            mobileMenu.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Закрываем меню при клике на ссылку
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Анимация при скролле
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Функция для переключения прайсов
+        function togglePrice(category) {
+            const allContents = document.querySelectorAll('.price-content');
+            const allButtons = document.querySelectorAll('.price-toggle');
+            
+            // Закрываем все открытые прайсы
+            allContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Убираем активный класс со всех кнопок
+            allButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Открываем выбранный прайс
+            const selectedContent = document.getElementById(category);
+            const selectedButton = event.target;
+            
+            if (selectedContent && selectedContent.classList.contains('active')) {
+                selectedContent.classList.remove('active');
+                selectedButton.classList.remove('active');
+            } else {
+                selectedContent.classList.add('active');
+                selectedButton.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
